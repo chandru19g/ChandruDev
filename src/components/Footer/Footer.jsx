@@ -2,6 +2,7 @@ import React from "react";
 import NavLinks from "../Navbar/NavLinks";
 import { Link } from "react-router-dom";
 import NameLogo from "../UI/NameLogo";
+import Divider from "../UI/Divider";
 
 export default function () {
   const navLinks = [
@@ -38,7 +39,7 @@ export default function () {
           </ul>
         </div>
       </div>
-      <div className="border-b-2 border-whiteColor mx-4" />
+      <Divider />
       <div className="h-full max-w-screen-xl mx-auto flex flex-col text-greyColor text-lg items-center justify-between px-4 py-6">
         © 2024 Chandru. All rights reserved
       </div>
