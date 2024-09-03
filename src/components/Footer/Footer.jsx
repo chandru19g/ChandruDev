@@ -41,7 +41,7 @@ export default function () {
       </div>
       <Divider />
       <div className="h-full max-w-screen-xl mx-auto flex flex-col text-greyColor text-lg items-center justify-between px-4 py-6">
-        © 2024 Chandru. All rights reserved
+        © 2024 Chandru. All rights reserved.
       </div>
     </div>
   );
