@@ -8,15 +8,15 @@ export default function () {
   const navLinks = [
     {
       title: "About",
-      path: "/about",
+      path: "#about",
     },
     {
       title: "Projects",
-      path: "/projects",
+      path: "#projects",
     },
     {
       title: "Contact",
-      path: "/contact",
+      path: "#contact",
     },
   ];
 
@@ -29,7 +29,7 @@ export default function () {
             {navLinks.map((navLink, index) => (
               <li key={index}>
                 <Link
-                  className="text-greyColor font-semibold text-lg"
+                  className="text-greyColor hover:text-whiteColor font-semibold text-lg"
                   to={navLink.path}
                 >
                   {navLink.title}

@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Divider() {
-  return <div className="border-b-2 border-whiteColor mx-4" />;
+export default function Divider({ className }) {
+  return <div className={`border-b-2 mx-4 ${className}`} />;
 }

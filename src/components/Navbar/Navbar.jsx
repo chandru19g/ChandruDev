@@ -6,17 +6,23 @@ export default function Navbar() {
   const navLinks = [
     {
       title: "About",
-      path: "/about",
+      path: "#about",
     },
     {
       title: "Projects",
-      path: "/projects",
+      path: "#projects",
     },
     {
       title: "Contact",
-      path: "/contact",
+      path: "#contact",
     },
   ];
+
+  const handleNavClick = (path) => {
+    document
+      .getElementById(path.substring(1))
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <nav className="w-full z-50 top-0">
@@ -26,7 +32,13 @@ export default function Navbar() {
           <ul className="flex items-center p-4 md:p-0 md:flex-row md:space-x-8 space-x-2 mt-0">
             {navLinks.map((navLink, index) => (
               <li key={index}>
-                <NavLinks link={navLink} onClick={() => {}} />
+                <NavLinks
+                  link={navLink}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(navLink.path);
+                  }}
+                />
               </li>
             ))}
           </ul>
