@@ -1,7 +1,11 @@
-import { useState } from "react";
+import Intro from "./sections/Intro";
 
 function App() {
-  return <div className="bg-primaryColor h-full"></div>;
+  return (
+    <>
+      <Intro />
+    </>
+  );
 }
 
 export default App;
