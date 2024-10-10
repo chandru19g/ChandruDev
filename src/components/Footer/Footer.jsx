@@ -1,22 +1,34 @@
 import React from "react";
-import NavLinks from "../Navbar/NavLinks";
 import { Link } from "react-router-dom";
 import NameLogo from "../UI/NameLogo";
 import Divider from "../UI/Divider";
 
+import { useNavLinks } from "../../data/NavLinksContext";
+
+import gitHub from "../../assets/github.png";
+import linkedIn from "../../assets/linkedin.png";
+import instagram from "../../assets/instagram.png";
+import medium from "../../assets/medium.png";
+
 export default function () {
-  const navLinks = [
+  const navLinks = useNavLinks();
+
+  const socialMediaIcons = [
     {
-      title: "About",
-      path: "#about",
+      icon: gitHub,
+      path: "https://github.com/chandru19g",
     },
     {
-      title: "Projects",
-      path: "#projects",
+      icon: linkedIn,
+      path: "https://www.linkedin.com/in/chandru-g-156a831b1/",
     },
     {
-      title: "Contact",
-      path: "#contact",
+      icon: instagram,
+      path: "https://www.instagram.com/chandruappdev/",
+    },
+    {
+      icon: medium,
+      path: "https://medium.com/@chandru1918g",
     },
   ];
 
@@ -33,6 +45,21 @@ export default function () {
                   to={navLink.path}
                 >
                   {navLink.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex flex-row py-6">
+          <ul className="flex items-center p-4 md:p-0 md:flex-row md:space-x-8 space-x-2 mt-0">
+            {socialMediaIcons.map((socialMediaIcon, index) => (
+              <li key={index}>
+                <Link
+                  className="text-greyColor hover:text-whiteColor font-semibold text-lg"
+                  to={socialMediaIcon.path}
+                  target="_blank"
+                >
+                  <img src={socialMediaIcon.icon} />
                 </Link>
               </li>
             ))}
