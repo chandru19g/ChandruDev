@@ -1,22 +1,10 @@
 import React from "react";
 import NavLinks from "./NavLinks";
 import NameLogo from "../UI/NameLogo";
+import { useNavLinks } from "../../data/NavLinksContext";
 
 export default function Navbar() {
-  const navLinks = [
-    {
-      title: "About",
-      path: "#about",
-    },
-    {
-      title: "Projects",
-      path: "#projects",
-    },
-    {
-      title: "Contact",
-      path: "#contact",
-    },
-  ];
+  const navLinks = useNavLinks();
 
   const handleNavClick = (path) => {
     document
