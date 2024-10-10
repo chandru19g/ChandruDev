@@ -4,14 +4,17 @@ import App from "./App.jsx";
 import "./index.css";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import { NavLinksProvider } from "./data/NavLinksContext.jsx";
 
 const Layout = () => {
   return (
-    <div className="bg-primaryColor h-screen font-satoshi">
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </div>
+    <NavLinksProvider>
+      <div className="bg-primaryColor h-screen font-satoshi">
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
+    </NavLinksProvider>
   );
 };
 

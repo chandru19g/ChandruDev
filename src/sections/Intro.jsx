@@ -6,7 +6,7 @@ const Intro = () => {
   return (
     <section id="#">
       <div className="max-w-screen-xl mx-auto flex flex-col items-center justify-center px-4 py-4 text-whiteColor md:py-24">
-        <div className="text-xl font-semibold">Chandru</div>
+        <div className="text-4xl font-semibold">Chandru</div>
         <div className="text-2xl font-bold text-secondaryColor pt-2 text-center">
           Android/iOS App Developer | Full-Stack web Developer
         </div>
