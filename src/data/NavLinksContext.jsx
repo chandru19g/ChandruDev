@@ -28,3 +28,9 @@ export const NavLinksProvider = ({ children }) => {
 export const useNavLinks = () => {
   return useContext(NavLinksContext);
 };
+
+export const handleNavClick = (path) => {
+  document
+    .getElementById(path.substring(1))
+    ?.scrollIntoView({ behavior: "smooth" });
+};

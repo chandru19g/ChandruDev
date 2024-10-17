@@ -1,10 +1,16 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import profileImage from "../assets/profile.jpeg";
+import Divider from "../components/UI/Divider";
 
 const AboutMe = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <section id="about">
+    <section id="about" data-aos="zoom-in-up">
       <div className="max-w-screen-xl mx-auto flex md:flex-row flex-col-reverse items-center justify-center px-4 py-8 text-whiteColor md:py-24">
         <div className="relative inline-block">
           <img
@@ -37,6 +43,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
+      <Divider className={`border-secondaryColor mx-0`} />
     </section>
   );
 };

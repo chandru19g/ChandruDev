@@ -1,16 +1,10 @@
 import React from "react";
 import NavLinks from "./NavLinks";
 import NameLogo from "../UI/NameLogo";
-import { useNavLinks } from "../../data/NavLinksContext";
+import { handleNavClick, useNavLinks } from "../../data/NavLinksContext";
 
 export default function Navbar() {
   const navLinks = useNavLinks();
-
-  const handleNavClick = (path) => {
-    document
-      .getElementById(path.substring(1))
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <nav className="w-full z-50 top-0">

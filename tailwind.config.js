@@ -9,6 +9,7 @@ export default {
         whiteColor: "#E3E3E3",
         greyColor: "#A9A9A9",
         blueGreyColor: "#26313F",
+        purpleColor: "#2E0249",
       },
       fontFamily: {
         satoshi: ["Satoshi", "sans-serif"], // Set your custom font as the default sans font
