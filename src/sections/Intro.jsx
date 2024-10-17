@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Divider from "../components/UI/Divider";
+import { handleNavClick } from "../data/NavLinksContext";
 
 const Intro = () => {
   return (
@@ -18,7 +19,11 @@ const Intro = () => {
         </div>
         <Link
           className="bg-secondaryColor px-3 py-1 rounded-lg text-primaryColor my-10 text-xl font-medium"
-          to="#contact"
+          to={"#contact"}
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick("#contact");
+          }}
         >
           Get in touch
         </Link>

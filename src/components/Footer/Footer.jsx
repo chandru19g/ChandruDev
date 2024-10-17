@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import NameLogo from "../UI/NameLogo";
 import Divider from "../UI/Divider";
 
-import { useNavLinks } from "../../data/NavLinksContext";
+import { handleNavClick, useNavLinks } from "../../data/NavLinksContext";
 
 import gitHub from "../../assets/github.png";
 import linkedIn from "../../assets/linkedin.png";
@@ -43,6 +43,10 @@ export default function () {
                 <Link
                   className="text-greyColor hover:text-whiteColor font-semibold text-lg"
                   to={navLink.path}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(navLink.path);
+                  }}
                 >
                   {navLink.title}
                 </Link>
