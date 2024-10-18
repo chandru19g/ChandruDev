@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import contactBg from "../assets/contact-bg.png";
+import { SectionHeader } from "../components/UI/SectionHeader";
 
 export const ContactUs = () => {
   const techs = [
@@ -41,7 +42,7 @@ export const ContactUs = () => {
   return (
     <section id="contact" data-aos="zoom-in-up">
       <div className="max-w-screen-xl mx-auto flex flex-col items-center justify-center md:px-4 py-8 md:py-24 text-whiteColor">
-        <h2 className="text-4xl font-bold text-center">Get in Touch</h2>
+        <SectionHeader title={"Get in Touch"} />
         <div className="flex flex-col-reverse md:flex-row md:my-16 my-12 w-full">
           <div
             className="hidden md:flex w-1/2 justify-center items-center p-10 text-5xl font-extrabold rounded-l-3xl"

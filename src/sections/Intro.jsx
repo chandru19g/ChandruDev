@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Divider from "../components/UI/Divider";
 import { handleNavClick } from "../data/NavLinksContext";
+import { SectionHeader } from "../components/UI/SectionHeader";
 
 const Intro = () => {
   return (
     <section id="#">
       <div className="max-w-screen-xl mx-auto flex flex-col items-center justify-center px-4 py-4 text-whiteColor md:py-24">
-        <div className="text-4xl font-semibold">Chandru</div>
+        <SectionHeader title={"Chandru"} />
         <div className="text-2xl font-bold text-secondaryColor pt-2 text-center">
           Android/iOS App Developer | Full-Stack web Developer
         </div>

@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import profileImage from "../assets/profile.jpeg";
 import Divider from "../components/UI/Divider";
+import { SectionHeader } from "../components/UI/SectionHeader";
 
 const AboutMe = () => {
   useEffect(() => {
@@ -22,7 +23,7 @@ const AboutMe = () => {
         </div>
         <div className="flex flex-col md:justify-start md:items-start justify-center items-center self-start md:w-max md:ml-16 md:pb-0 pb-8">
           <div className="flex flex-col md:w-max">
-            <div className="text-4xl font-bold">About Me</div>
+            <SectionHeader title={"About Me"} />
             <div className="text-secondaryColor text-end text-sm">
               --Who Am I?
             </div>
